@@ -1,0 +1,92 @@
+@use "reset.scss";
+@use "vars.scss";
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.eot");
+    src: url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.eot?#iefix")
+            format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.woff2")
+            format("woff2"),
+        url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.woff")
+            format("woff"),
+        url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.ttf")
+            format("truetype"),
+        url("https://db.onlinewebfonts.com/t/2bf16335573007d828f4197c2b884c04.svg#Satoshi")
+            format("svg");
+}
+
+body {
+    background-color: vars.$off-white;
+    font-family: "Satoshi";
+    font-size: vars.$default-font-size;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+@mixin flexbox($direction, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+.flex-page-layout {
+    @include flexbox(column, vars.$gap-between-sections);
+    align-items: center;
+    text-align: left;
+    section {
+        width: 100%;
+        padding: 2%;
+    }
+}
+
+.navbar-list {
+    @include flexbox(row, 3rem);
+    width: 100%;
+}
+
+.project-list {
+    @include flexbox(column, 1rem);
+    align-items: center;
+    a {
+      width: 100%;
+      padding: 2%;
+    }
+}
+
+.contact-list {
+    @include flexbox(row, normal);
+}
+
+.project-card-bg {
+    width: 100%;
+    border-style: solid;
+    border-width: vars.$card-bg-border-size;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center center;
+    gap: 10% 5%;
+    div, p {
+        padding: 2%;
+    }
+}
+
+
+.project-img {
+    grid-row: 1 / span 2;
+    background-size: cover;
+    background-position: center;
+    margin-left: 7.5%;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: vars.$sky-blue;
+}
