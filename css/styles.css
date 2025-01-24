@@ -101,6 +101,14 @@ img {
   width: 100%;
 }
 
+.navbar-svg {
+  background: none;
+  fill: none;
+}
+.navbar-svg:hover {
+  filter: invert(77%) sepia(26%) saturate(558%) hue-rotate(155deg) brightness(98%) contrast(89%);
+}
+
 .project-list {
   display: flex;
   flex-direction: column;

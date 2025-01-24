@@ -31,45 +31,84 @@
             <section class="projects">
                 <header>My Projects</header>
                 <ul class="project-list">
-                    <a href="TODO">
+                    <a href="https://github.com/JeromeRReduta/BankApp">
+                        <li class="project-card-bg">
+                            <div class="project-img"
+                            style="background-image: url('/images/bank-app.png')">
+                        </div>
+                        <p>Bank App</p>
+                            <p>I created a bare-bones banking app using a finite state machine. Users can "login" to a pre-existing account, deposit and withdraw, view their account details, and "logout." Soon after starting, it became clear that an MVC wasn’t the best or simplest implementation of an app with a full menu system, which led me to the State pattern. From this project, I learned about how states and finite state machines work, which is crucial both in menu-based apps and in game development.</p>
+                        </li>
+                    </a>
+                    <a href="https://github.com/JeromeRReduta/Calculator">
                         <li class="project-card-bg">
                             <div
                                 class="project-img"
                                 style="
-                                    background-image: url('https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg');
+                                    background-image: url('/images/calc.png');
                                 "></div>
-                            <p>Console Search Engine</p>
                             <p>
-                                Here's a thing I learned from the search engine.
-                                Here's a thing it does.
+                                Calculators that take 2 numbers and an operation
+                                are a dime a dozen. I put two twists in my
+                                implementation: (1) users can input as many
+                                operations in a row as they want, and (2) before
+                                displaying the result, the calculator "shows its
+                                work" - it repeats all the steps it took to get
+                                to the result. To get the second criteria, I
+                                implemented a Writer monad called
+                                NumberWithLogs. This meant that operations could
+                                change the calculator’s result and record what
+                                operation was taken. From this, I learned about
+                                monads, the easiest/hardest/weirdest/monadest
+                                functional design pattern. I also learned JUnit,
+                                allowing me to ensure NumberWithLogs and
+                                OperationWithLogs worked correctly.
                             </p>
                         </li>
                     </a>
-                    <a href="TODO">
+                    <a href="https://github.com/JeromeRReduta/React-Tic-Tac-Toe">
                         <li class="project-card-bg">
                             <div
                                 class="project-img"
                                 style="
-                                    background-image: url('https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg');
+                                    background-image: url('/images/react-tic-tac-toe.png');
                                 "></div>
-                            <p>Console Search Engine</p>
+                            <p>React Tic-Tac-Toe</p>
                             <p>
-                                Here's a thing I learned from the search engine.
-                                Here's a thing it does.
+                                Following the React Dev page’s tutorial, I
+                                implemented a fully functioning tic-tac-toe game
+                                for two people sharing a computer. It also has
+                                "time travel," where people can reset the board
+                                state to whatever it was during a previous move.
+                                I also created a few unit tests in Jest to
+                                ensure the data structures worked as intended.
+                                From this, I learned a lot about what makes
+                                React tick, as well as some JavaScript on the
+                                side.
                             </p>
                         </li>
                     </a>
-                    <a href="TODO">
+                    <a href="https://github.com/JeromeRReduta/project-JeromeRRedutaMVC/tree/Project_2_Partial_Search">
                         <li class="project-card-bg">
                             <div
                                 class="project-img"
                                 style="
-                                    background-image: url('https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg');
+                                    background-image: url('/images/search-engine.png');
                                 "></div>
                             <p>Console Search Engine</p>
                             <p>
-                                Here's a thing I learned from the search engine.
-                                Here's a thing it does.
+                                To prove to myself that I’ve improved (and to
+                                clean up my Search Engine codebase), I decided
+                                to recreate my Search Engine project from
+                                Software Development. For the sake of time, I
+                                only did up to Part 2 (a functioning,
+                                single-threaded, text-based search engine).
+                                Unlike in my college years, I used SOLID
+                                principles, and an MVC architecture for the
+                                inverted index, the stem counter, and the search
+                                result index. The result is a far cleaner, more
+                                maintainable, more digestible, and more
+                                extensible codebase.
                             </p>
                         </li>
                     </a>
@@ -79,26 +118,24 @@
                 <ul class="navbar-list">
                     <li>
                         <a href="https://github.com/jeromerreduta/">
-                            <img
-                                src="https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg"
+                            <img class="navbar-svg"
+                                src="/images/github.svg"
                                 alt="computer"
                                 width="20%" />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/jeromerreduta/">
-                            <img
-                                src="https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg"
-                                alt="computer"
-                                width="20%" />
+                            <img class="navbar-svg"
+                                src="/images/linkedin.svg" alt="linkedin"
+                                width="500%">
                         </a>
                     </li>
                     <li>
                         <a href="mailto:jrreduta@yahoo.com">
-                            <img
-                                src="https://cdn.britannica.com/77/170477-050-1C747EE3/Laptop-computer.jpg"
-                                alt="computer"
-                                width="20%" />
+                            <img class="navbar-svg"
+                                src="/images/email.svg"
+                                alt="mail" width="20%" > <!--TODO-->
                         </a>
                     </li>
                 </ul>
